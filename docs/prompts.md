@@ -27,6 +27,18 @@ awesome meticulous job so far. please keep up the good work. based on your final
 
 ---
 
+please meticulously review @status.md , @IMPLEMENTATION_PLAN.md and @worklog.md and validate the codebase against them.
+
+---
+
+awesome meticulous job so far. please keep up the good work. now, please meticulously plan to create an informative AI coding agent briefing document using the 'claude-md' skill.
+
+---
+
+awesome meticulous job so far. please keep up the good work. now, please meticulously plan to create an awesome `README.md` for the GitHub repo hosting the project, use the 'claude-md' skill to help you.
+
+---
+
 Awesome job on your meticulous analysis and research. Please keep up the good work. Now, please meticulously use extensive web searches to validate the following feedback.
 
 ---
