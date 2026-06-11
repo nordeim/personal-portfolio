@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+/* =============================================
+   DESIGN SYSTEM: The Engineered Soul v2.0
+   Tactile Brutalism + High-End Editorial
+   ============================================= */
+
+@theme {
+  /* Grid Unit */
+  --unit: 28px;
+
+  /* Colors — Dark Theme (default) */
+  --color-ink: #07080d;
+  --color-ink-light: #15151b;
+  --color-surface: #11131d;
+  --color-surface-elevated: #1a1c2e;
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.68);
+  --color-text-muted: rgba(255, 255, 255, 0.52);
+  --color-text-faint: rgba(255, 255, 255, 0.38);
+  --color-border: rgba(255, 255, 255, 0.13);
+  --color-border-strong: rgba(255, 255, 255, 0.24);
+  --color-border-accent: rgba(255, 255, 255, 0.18);
+
+  /* Colors — Light Theme */
+  --color-day-bg: #fff8e8;
+  --color-day-surface: #ffffff;
+  --color-day-text: #15151b;
+  --color-day-text-secondary: rgba(21, 21, 27, 0.64);
+  --color-day-border: rgba(21, 21, 27, 0.1);
+  --color-day-border-strong: rgba(21, 21, 27, 0.18);
+
+  /* Accent Colors */
+  --color-accent-code: #2457ff;
+  --color-accent-design: #ff5c35;
+  --color-accent-art: #00a77f;
+  --color-accent-photo: #f2b705;
+  --color-accent-poetry: #8f55ff;
+  --color-accent-story: #e5488b;
+  --color-accent-experiments: #16a3b8;
+
+  /* Fonts */
+  --font-editorial: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif;
+  --font-utility: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --spacing-grid: 28px;
+  --spacing-section: 104px;
+
+  /* Border Radius */
+  --radius-brutal: 0px;
+  --radius-soft: 8px;
+  --radius-pill: 999px;
+}
+
+/* =============================================
+   BASE STYLES
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-accent-photo);
+  color: var(--color-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(36, 87, 255, 0.35);
+  outline-offset: 3px;
+}
+
+/* =============================================
+   GRID BACKGROUND (Visible 28px grid)
+   ============================================= */
+
+.theme-night {
+  background:
+    linear-gradient(180deg, #07080d 0%, #11111b 42%, #171018 68%, #07080d 100%);
+  color: var(--color-text);
+}
+
+.theme-night::before {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(36, 87, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 87, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  content: '';
+  pointer-events: none;
+  z-index: 0;
+}
+
+.theme-day {
+  background:
+    linear-gradient(180deg, #fff8e8 0%, #fff3ef 38%, #f1fbf7 68%, #fff8e8 100%);
+  color: var(--color-day-text);
+}
+
+.theme-day::before {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(21, 21, 27, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 21, 27, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  content: '';
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+
+.type-kinetic-hero {
+  font-family: var(--font-editorial);
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 0.82;
+  text-wrap: balance;
+}
+
+.type-editorial-h2 {
+  font-family: var(--font-editorial);
+  font-size: clamp(2.2rem, 4.2vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.type-editorial-h3 {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.35rem, 2.8vw, 2.55rem);
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+.type-mono-util {
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.type-body {
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  line-height: 1.72;
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+@keyframes sheet-drift {
+  0%, 100% {
+    filter: saturate(1);
+  }
+  50% {
+    filter: saturate(1.4);
+  }
+}
+
+@keyframes hero-stage-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lattice-breathe {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.92;
+  }
+}
+
+@keyframes float-card {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(-1deg);
+  }
+}
+
+/* =============================================
+   GRAIN OVERLAY
+   ============================================= */
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* =============================================
+   REDUCED MOTION
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .light-sheet,
+  .signal-lattice span,
+  .hero-stage,
+  .floating-card,
+  .about-panel-content,
+  .about-flow-step,
+  .about-flow-step::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero-stage,
+  .hero-monogram,
+  .artifact-panel,
+  .studio-labels,
+  .artifact-stack,
+  .signal-lattice,
+  .portrait-shell {
+    transform: none !important;
+  }
+}
