@@ -1,0 +1,26 @@
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.github/
+	.gitignore
+	AGENTS.md
+	CLAUDE.md
+	DISTILLED-LEARNINGS.md
+	GEMINI.md
+	README.md
+	docs/
+	index.html
+	luxeverse-architect-skill.md
+	misc/
+	outputs/
+	package.json
+	public/
+	src/
+	super-frontend-design-skill.md
+	system_prompt_coding.md
+	vite.config.js
+
+nothing added to commit but untracked files present (use "git add" to track)
