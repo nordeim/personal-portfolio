@@ -84,4 +84,4 @@ pnpm typecheck  # ✅ Zero type errors
 pnpm build      # ✅ Build succeeds (81.58 kB CSS, 239.95 kB JS)
 ```
 
-The implementation plan is saved at `/home/z/my-project/personal-portfolio/IMPLEMENTATION_PLAN.md` and the full worklog at `/home/z/my-project/personal-portfolio/worklog.md`.
+The implementation plan is saved at `IMPLEMENTATION_PLAN.md` and the full worklog at `worklog.md`.

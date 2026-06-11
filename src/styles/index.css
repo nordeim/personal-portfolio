@@ -258,7 +258,9 @@ a:focus-visible {
   .floating-card,
   .about-panel-content,
   .about-flow-step,
-  .about-flow-step::before {
+  .about-flow-step::before,
+  #mobile-navigation,
+  button[aria-label="Close navigation"] {
     animation: none !important;
     transition: none !important;
   }

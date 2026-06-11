@@ -22,7 +22,7 @@ export function BentoTile({ project, onCloseMenu }: BentoTileProps) {
 
   return (
     <a
-      className="project-gateway group relative flex flex-col min-h-[360px] overflow-hidden rounded-lg border border-white/13 bg-[linear-gradient(180deg,color-mix(in_srgb,var(--project-accent)_16%,transparent),transparent_44%),rgba(255,255,255,0.052)] hover:shadow-[0_22px_70px_rgba(0,0,0,0.26)] transition-all duration-200 hover:-translate-y-0.5
+      className="project-gateway group relative flex flex-col min-h-[360px] overflow-hidden rounded-none border border-white/13 bg-[linear-gradient(180deg,color-mix(in_srgb,var(--project-accent)_16%,transparent),transparent_44%),rgba(255,255,255,0.052)] hover:shadow-[0_22px_70px_rgba(0,0,0,0.26)] transition-all duration-200 hover:-translate-y-0.5
         [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[linear-gradient(180deg,color-mix(in_srgb,var(--project-accent)_14%,transparent),transparent_44%),rgba(255,255,255,0.62)] [.theme-day_&]:hover:shadow-[0_22px_70px_rgba(168,98,70,0.16)]
       "
       href={project.link || '#projects'}

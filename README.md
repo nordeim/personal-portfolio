@@ -1,112 +1,116 @@
-# Nicholas Yun Portfolio
+# Nicholas Yun Portfolio — The Engineered Soul (v2.0)
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](package.json)
-[![Tech Stack](https://img.shields.io/badge/stack-React%2019%20%2B%20Vite-61dafb.svg)](https://react.dev/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Deploy](https://github.com/nicholasyunzy/personal-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/nicholasyunzy/personal-portfolio/actions/workflows/deploy.yml)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](package.json)
+[![Tech Stack](https://img.shields.io/badge/stack-React_19_|_TS_6_|_Vite_6_|_Tailwind_4-indigo.svg)](package.json)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
+[![Aesthetic](https://img.shields.io/badge/aesthetic-Tactile_Brutalism-black.svg)](GEMINI.md)
 
-> **Ideas, made tangible.** A "living shelf" for a Creative Technologist.
+An avant-garde **Digital Installation** that balances **Tactile Brutalism** (visible structure, mono utility, 1px borders) with **High-End Editorial** (serif typography, extreme whitespace, cinematic motion).
 
-Nicholas Yun's personal portfolio is a high-performance, minimalist single-page application built to showcase a multidisciplinary body of work. It treats the portfolio not as a static list, but as an evolving collection of experiments across code, design, writing, art, photography, and storytelling.
+## 🔭 Overview
 
-## 🚀 Quick Start
+The Nicholas Yun Portfolio (v2.0) is a "Post-AI Authenticity" project. It rejects generic web patterns and "AI slop" aesthetics in favor of a unique, data-driven experience built on a rigid mathematical foundation and kinetic interaction models.
 
-Get the project running locally in under 60 seconds.
+- **The Soul**: High-contrast editorial spreads using *Cormorant Garamond*.
+- **The Machine**: A technical shell powered by *IBM Plex Mono* and a visible 28px background grid.
+- **The Flow**: Custom weighted motion logic where typography weight responds to scroll velocity.
 
-### Prerequisites
-- **Node.js** ≥ 18.0.0
-- **npm** ≥ 9.0.0
+---
 
-### Setup
-```bash
-# 1. Clone the repository
-git clone https://github.com/nicholasyunzy/personal-portfolio.git
-cd personal-portfolio
+## 🚀 Key Features
 
-# 2. Install dependencies
-npm install
+| Feature | Description |
+| :--- | :--- |
+| **⚡ Kinetic Typography** | Viewport-scaled headlines that dynamically change weight based on scroll speed. |
+| **🍱 Asymmetric Bento** | A non-linear project shelf with category-specific visual textures (Mono for Code, Serif for Poetry). |
+| **📟 Machine Mode (MX)** | A technical overlay revealing build versions, raw state data, and system logic. |
+| **📐 The 28px Grid** | A mathematically rigid, visible background rhythm that dictates every pixel of the site. |
+| **🖐️ Human Fingerprint** | Subtle CSS noise and grain overlays to add tactile, analog texture to the digital canvas. |
+| **♿ AAA Accessibility** | High-contrast brutalism targeting WCAG AAA with full `prefers-reduced-motion` support. |
 
-# 3. Start development server
-npm run dev
-```
+---
 
-**Verify Setup**: Open [http://localhost:5173](http://localhost:5173). You should see the interactive Hero section with the "Creative Technologist" rotation active.
-
-## 🏗️ Architecture
-
-The project follows a **content-driven SPA architecture**, leveraging modern build tools to automate portfolio updates without manual route configuration.
+## 🛠️ Architecture
 
 ### Tech Stack
 | Layer | Technology | Version | Purpose |
-|-------|------------|---------|---------|
-| **Frontend** | [React](https://react.dev/) | 19.0 | UI Library & State Management |
-| **Build Tool** | [Vite](https://vitejs.dev/) | 7.0 | Development Server & Bundler |
-| **Styling** | Plain CSS | - | Bespoke UI & Design Tokens |
-| **Content** | Markdown + YAML | - | Project Metadata & Narrative |
-| **Deployment**| GitHub Actions | v4 | Automated CI/CD to GitHub Pages |
+| :--- | :--- | :--- | :--- |
+| **Framework** | React | 19.0 | Component-driven UI orchestrator |
+| **Language** | TypeScript | 6.0 | Strict-mode type safety |
+| **Build Tool** | Vite | 6.3 | Zero-latency HMR and production bundling |
+| **Styling** | Tailwind CSS | 4.1 | CSS-first configuration via `@theme` |
+| **Routing** | Custom Hook | — | Hash-based routing for Archive Spreads |
 
-### Core Principles
-1. **Anti-Generic Design**: Rejection of safe grid templates in favor of a distinctive typographical hierarchy and editorial whitespace.
-2. **Calm Motion**: Transitions follow a 900ms fade-out/fade-in cycle to ensure information density never feels overwhelming.
-3. **Automated Ingestion**: Uses `import.meta.glob` to scan `src/content/` at build time, generating the portfolio grid dynamically.
+### File Hierarchy
+- `📂 src/components` — High-fidelity UI primitives (HeroKinetic, AboutFlow, MachineOverlay).
+- `📂 src/hooks` — Interaction logic (`useWeightedScroll`, `useRouteHash`).
+- `📂 src/lib` — Data-driven content ingestion and strict TypeScript interfaces.
+- `📂 src/styles` — Global design system orchestration and Tailwind `@theme` tokens.
+- `📂 content` — Structured Markdown and asset sources.
 
-## 📂 File Hierarchy
-
-```text
-📂 src/
-├── 📂 content/          # The source of truth for all portfolio data
-│   ├── 📂 portrait/    # Hero portraits mapped to slides
-│   ├── 📂 collections/ # Narrative archives (Poetry, Art, Stories, etc.)
-│   └── 📂 portfolio/   # Gateway project cards
-├── 📄 App.jsx          # Central application logic & Dynamic Ingestion
-├── 📄 App.css          # Global design system & layout tokens
-└── 📄 main.jsx         # React entry point
-📂 public/              # Static assets (brand marks, etc.)
-📂 outputs/             # Design specs, PRD, and Execution Plans
-```
-
-## 📝 Content Management
-
-Adding new work is as simple as dropping files into `src/content/`.
-
-1. **Markdown**: Use YAML frontmatter for metadata:
-   ```yaml
-   ---
-   title: Project Alpha
-   category: Code
-   accent: "#2457ff"
-   description: A brief summary for the card.
-   ---
-   Full narrative content goes here.
-   ```
-2. **Media Pairing**: Place a `.jpg` or `.png` with the **same filename** as your `.md` file in the same folder to automatically set it as the preview image.
-3. **PDF Support**: Place a `.pdf` with the same filename to automatically provide a "View Document" link.
+---
 
 ## 🎨 Design System
 
-The UI is built on a custom design system defined in `src/App.css`.
+The site is governed by a strict set of design tokens defined in `src/styles/index.css`:
 
-- **Accents**: 
-  - 🟠 Design: `#ff5c35`
-  - 🔵 Code: `#2457ff`
-  - 🟢 Art: `#00a77f`
-  - 🟡 Photography: `#f2b705`
-  - 🟣 Poetry: `#8f55ff`
-- **Grid System**: 28px linear gradient background grid used for structural alignment.
-- **Typography**: Optimized for legibility using `ui-sans-serif` and high-contrast `text-rendering`.
+- **The Unit**: `28px` grid rhythm.
+- **Borders**: `1px solid` with `0px` radius (**radius-brutal**).
+- **Colors**: OKLCH-based palette for perceptual uniformity across dark and light themes.
+- **Typography**:
+  - **Editorial**: *Cormorant Garamond* (Kinetic headlines).
+  - **Utility**: *IBM Plex Mono* (Labels, metadata, MX data).
+  - **Body**: *Inter* (Legibility-focused reading).
 
-## 🚢 Deployment
+---
 
-The site is configured for zero-config deployment via **GitHub Actions**.
+## ⚡ Quick Start
 
-- **Branch**: `main`
-- **Environment**: GitHub Pages
-- **Trigger**: Automatic on push to `main`
-- **Workflow**: `.github/workflows/deploy.yml`
+### Prerequisites
+- **Node.js** ≥ 20
+- **pnpm** ≥ 9
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/your-username/personal-portfolio.git
+cd personal-portfolio
+
+# Install dependencies
+pnpm install
+```
+
+### Development
+```bash
+# Start Vite development server
+pnpm dev
+```
+
+### Verification
+```bash
+# Run strict type checking
+pnpm typecheck
+
+# Build for production
+pnpm build
+```
+
+---
+
+## 🤝 Contributing
+
+This project follows the **Meticulous Approach** for all changes. Please refer to [CLAUDE.md](./CLAUDE.md) for implementation standards and the six-phase workflow (**Analyze → Plan → Validate → Implement → Verify → Deliver**).
+
+1. Ensure `pnpm typecheck` passes with zero errors.
+2. Maintain the **Tactile Brutalist** aesthetic.
+3. Reject generic components; use the project's established design system.
+
+---
 
 ## ⚖️ License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for more information (if applicable).
 
 ---
-*Built with precision by Nicholas Yun.*
+
+*“Engineering the soul, one pixel at a time.”*

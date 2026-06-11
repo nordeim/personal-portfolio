@@ -34,9 +34,9 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
         </div>
 
         {activeItem ? (
-          <article className="grid gap-7 p-[clamp(24px,5vw,54px)] border border-white/13 rounded-lg bg-white/[0.055] [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_16%,transparent),transparent_42%),rgba(255,255,255,0.54)]">
+          <article className="grid gap-7 p-[clamp(24px,5vw,54px)] border border-white/13 rounded-none bg-white/[0.055] [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_16%,transparent),transparent_42%),rgba(255,255,255,0.54)]">
             {activeItem.image ? (
-              <div className="overflow-hidden max-h-[620px] rounded-lg">
+              <div className="overflow-hidden max-h-[620px] rounded-none">
                 <img alt="" className="block w-full h-full object-cover" src={activeItem.image} />
               </div>
             ) : null}
@@ -56,7 +56,7 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
             {hasItems ? (
               items.map((item) => (
                 <a
-                  className="flex min-h-[260px] flex-col gap-3.5 p-5.5 border border-white/13 rounded-lg bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_18%,transparent),transparent_42%),rgba(255,255,255,0.055)] text-white hover:-translate-y-0.5 transition-transform duration-200
+                  className="flex min-h-[260px] flex-col gap-3.5 p-5.5 border border-white/13 rounded-none bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_18%,transparent),transparent_42%),rgba(255,255,255,0.055)] text-white hover:-translate-y-0.5 transition-transform duration-200
                     [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_16%,transparent),transparent_42%),rgba(255,255,255,0.54)]
                   "
                   href={`#/collections/${collection.slug}/${item.slug}`}
@@ -75,7 +75,7 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
                 </a>
               ))
             ) : (
-              <div className="col-span-full p-7 border border-white/13 rounded-lg bg-white/[0.055] [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.54)]">
+              <div className="col-span-full p-7 border border-white/13 rounded-none bg-white/[0.055] [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.54)]">
                 <h2 className="text-white [.theme-day_&]:text-[#15151b]">No items yet.</h2>
                 <p className="text-white/68 [.theme-day_&]:text-[rgba(21,21,27,0.66)]">This growing collection is waiting for its first piece.</p>
               </div>

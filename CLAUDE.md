@@ -2,73 +2,70 @@
 IMPORTANT: File is read fresh for every conversation. Be brief and practical.
 ---
 
-# Nicholas Yun Portfolio
-
-A personal portfolio website for Nicholas Yun, a Creative Technologist. Designed as a "living shelf" of work across code, design, writing, art, photography, and storytelling.
-
-**Tech Stack**: React 19, Vite, Plain CSS, GitHub Pages.
+# Nicholas Yun Portfolio — The Engineered Soul (v2.0)
 
 ## Core Identity & Purpose
-Nicholas Yun needs a site that presents him as a credible creative technologist with a wide-ranging, intentional body of work. The site should feel experimental, creative, professional, and personal.
+An avant-garde "Digital Installation" portfolio for Nicholas Yun. It balances **Tactile Brutalism** (visible grids, sharp borders, mono utility) with **High-End Editorial** (serif typography, extreme whitespace, cinematic motion) to deliver "Post-AI Authenticity."
+
+**Tech Stack**: React 19 (Strict), TypeScript 6, Vite 6, Tailwind CSS 4.
 
 ## Foundational Principles
 
 ### Meticulous Approach (Six-Phase Workflow)
-Follow this six-phase workflow for all implementation tasks:
-1. **ANALYZE**: Deep requirement mining; identify implicit needs and ambiguities.
-2. **PLAN**: Structured execution roadmap; present for user confirmation.
-3. **VALIDATE**: Obtain explicit user approval before implementation.
-4. **IMPLEMENT**: Modular, testable components; document alongside code.
-5. **VERIFY**: Rigorous QA against success criteria; check edge cases/accessibility.
+Follow this workflow for all implementation tasks:
+1. **ANALYZE**: Deep requirement mining; never assume surface-level needs.
+2. **PLAN**: Create a structured roadmap; present for confirmation.
+3. **VALIDATE**: Get explicit user approval before writing code.
+4. **IMPLEMENT**: Build modular, tested, and documented components.
+5. **VERIFY**: Rigorous QA (accessibility, performance, edge cases).
 6. **DELIVER**: Complete handoff with knowledge transfer.
-
-### Anti-Generic Design Philosophy
-- **Rejection of Safety**: No predictable grids or safe defaults. Distinct typographical hierarchy.
-- **Intentional Minimalism**: Use whitespace as a structural element.
-- **Micro-interactions**: Focus on perfect spacing and "invisible" UX.
-- **Calm Rotation**: About section should feel calm; fade out fully before swapping.
 
 ## Implementation Standards
 
-### React 19 & JavaScript
-- Functional components only.
-- Logic is currently centralized in `src/App.jsx`. Break into `src/components/` only if `App.jsx` exceeds 1000 lines.
-- Use `import.meta.glob` for dynamic content ingestion from `src/content/`.
-- Handle UI states: loading, error, empty, success.
+### TypeScript & React
+- **Strict Mode**: `strict: true` in `tsconfig.json`.
+- **Typing**: Prefer `interface` for structural definitions; `type` for unions/intersections.
+- **No `any`**: Use `unknown` or specific types.
+- **Patterns**: Use early returns, composition over inheritance, and functional components.
+- **States**: Handle loading, error, empty, and success states explicitly.
 
-### Styling (Plain CSS)
-- Use variables defined in `:root` in `src/App.css`.
-- Avoid CSS frameworks (Tailwind/Bootstrap) unless explicitly requested.
-- Maintain responsive behavior for desktop, tablet, and mobile.
-- Respect `prefers-reduced-motion`.
+### Tailwind CSS v4 & Styling
+- **CSS-First**: Configuration via `@theme` in `src/styles/index.css`.
+- **Grid Unit**: Use the 28px rhythm (`--unit: 28px`).
+- **Brutalism**: 1px solid borders, 0px border-radius (`radius-brutal`).
+- **Fonts**: 
+  - Editorial: `Cormorant Garamond` (headlines, kinetic).
+  - Utility: `IBM Plex Mono` (metadata, system labels).
+  - Body: `Inter`.
 
 ## Development Workflow
 
 ### Build Commands
 | Command | Purpose |
 |---------|---------|
-| `npm run dev` | Start development server |
-| `npm run build` | Production build to `dist/` |
-| `npm run preview` | Preview production build |
+| `npm run dev` | Start Vite development server |
+| `npm run build` | Compile TS and build production assets |
+| `npm run typecheck` | Run `tsc` strict type checking |
+| `npm run preview` | Preview production build locally |
 
-## Content Management
-The site is content-driven via `src/content/`:
-- **Portraits**: `src/content/portrait/` (subfolders map to hero slides).
-- **Collections**: `src/content/collections/` (folders like `poetry`, `artworks`).
-- **Markdown**: Use YAML frontmatter for metadata (title, category, accent, description).
-- **Association**: Media (JPG/PDF) with the same filename as MD files are automatically linked.
+### File Organization
+- `/src/components`: UI primitives and composite installations.
+- `/src/hooks`: Motion logic (`useWeightedScroll`) and system state.
+- `/src/lib`: Data structures (`data.ts`), types (`types.ts`), and ingestion (`content.ts`).
+- `/src/styles`: Tailwind configuration and global styles.
 
-## Testing Strategy
-*Currently no automated test suite.*
-- **Manual Verification**: Test desktop and mobile layouts after changes.
-- **Validation**: Confirm About transition height remains uniform during swaps.
+## Project-Specific Standards
 
-## Git & Version Control
-- **Main Branch**: Pushing to `main` triggers GitHub Actions deployment to GitHub Pages.
-- **Workflow**: `.github/workflows/deploy.yml`.
+### Kinetic Typography
+Headlines in `HeroKinetic` fluctuate in font-weight based on scroll velocity (calculated in `useWeightedScroll`). Ensure all motion respects `prefers-reduced-motion`.
 
-## Important Files
-- `src/App.jsx`: Main application logic and routing.
-- `src/App.css`: Global styles and layout.
-- `src/content/`: Source for all dynamic portfolio content.
-- `vite.config.js`: Vite configuration with base path for GH Pages.
+### Routing
+Uses custom hash-based routing via `useRouteHash.ts`. Avoid adding standard router libraries unless explicitly requested.
+
+### Data Management
+Content is data-driven. Define new entities in `src/lib/types.ts` and populate them in `src/lib/data.ts`. Imagery is ingested via `import.meta.glob` in `src/lib/content.ts`.
+
+## Anti-Patterns to Avoid
+- **AI Slop**: Avoid purple gradients, generic card grids, and "safe" system fonts.
+- **Monoliths**: Keep components small and focused.
+- **Over-Engineering**: Don't add libraries (like Framer Motion) for effects that can be achieved with simple CSS/hooks.

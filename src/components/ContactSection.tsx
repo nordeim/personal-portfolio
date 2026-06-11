@@ -16,7 +16,7 @@ export function ContactSection() {
 
           <div className="flex justify-center gap-4 mb-6">
             <a
-              className="inline-flex items-center justify-center gap-2.5 min-h-12 px-5 border border-white rounded-lg bg-white text-[#07080d] font-extrabold transition-all duration-200 hover:-translate-y-px [.theme-day_&]:border-[#15151b] [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]"
+              className="inline-flex items-center justify-center gap-2.5 min-h-12 px-5 border border-white rounded-none bg-white text-[#07080d] font-extrabold transition-all duration-200 hover:-translate-y-px [.theme-day_&]:border-[#15151b] [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]"
               href={contactLinks.email}
             >
               <SocialIcon icon="mail" />

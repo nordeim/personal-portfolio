@@ -1,59 +1,51 @@
-# Nicholas Yun Portfolio
-
-This project is a personal portfolio website for Nicholas Yun, a Creative Technologist. It is designed to be a "living shelf" of work across multiple disciplines, including code, design, writing, art, photography, and storytelling.
+# GEMINI.md: Nicholas Yun Portfolio — The Engineered Soul (v2.0)
 
 ## Project Overview
+This project is an avant-garde "Digital Installation" portfolio for Nicholas Yun. It balances **Tactile Brutalism** (visible grids, sharp borders, mono utility) with **High-End Editorial** (serif typography, extreme whitespace, cinematic motion). The goal is to create a unique, production-grade web experience that rejects generic "AI slop" aesthetics in favor of "Post-AI Authenticity."
 
-- **Tech Stack:** React 19, Vite, Plain CSS.
-- **Architecture:** Single-page application (SPA) with a dynamic content loading system. It uses `import.meta.glob` to ingest content from the `src/content/` directory at build time.
-- **Core Sections:**
-  - **Hero:** Interactive introduction with rotating slides and portrait images.
-  - **About:** Personal introduction with a calm, fade-based content rotation.
-  - **Portfolio:** A responsive grid of collection gateways (Design, Poetry, Photography, etc.).
-  - **Archive/Collections:** Dynamic pages that render content from Markdown files and associated images found in `src/content/`.
-  - **Contact:** Links to email, LinkedIn, Instagram, GitHub, and an external Wix site.
+### Key Technologies
+- **Framework**: React 19 (Strict Mode)
+- **Language**: TypeScript 6
+- **Build Tool**: Vite 6
+- **Styling**: Tailwind CSS 4 (with CSS-first configuration)
+- **Architecture**: Data-driven component model with hash-based routing.
 
 ## Building and Running
+The following commands are available for development and deployment:
 
-### Prerequisites
+- **Development**: `npm run dev` (Starts the Vite development server)
+- **Build**: `npm run build` (Compiles TypeScript and builds the production assets)
+- **Typecheck**: `npm run typecheck` (Runs `tsc` with no emission to verify types)
+- **Preview**: `npm run preview` (Previews the production build locally)
 
-- Node.js (v18+ recommended)
-- npm
+## Design & Development Conventions
 
-### Commands
+### Aesthetic Pillars
+- **The 28px Grid**: A visible background grid (`.theme-night::before`, `.theme-day::before`) that dictates the rhythm of the site.
+- **Brutalist Borders**: Use `1px` solid borders and `0px` border-radius (`radius-brutal`) for structural elements.
+- **Kinetic Typography**: Headlines use viewport-scaled `Cormorant Garamond` (or serif fallback) with weighted scroll interactions.
+- **Mono Utility**: Metadata and system labels use `IBM Plex Mono` for a technical feel.
 
-- **Development:** `npm run dev` - Starts the Vite development server.
-- **Build:** `npm run build` - Builds the project for production into the `dist/` directory.
-- **Preview:** `npm run preview` - Previews the production build locally.
+### Component Guidelines
+- **`HeroKinetic`**: Viewport-scaled typographic installation reactive to scroll and state.
+- **`AboutFlow`**: Asymmetric editorial layout for the narrative section.
+- **`BentoGrid`**: Non-linear project display using "textures" (e.g., Serif for Poetry, Mono for Code).
+- **`MachineOverlay`**: A technical debug/MX layer showing build info and raw state data.
+- **`GrainOverlay`**: A subtle CSS noise layer for "human fingerprint" texture.
 
-## Content Management
+### Development Standards
+- **Data-First**: Most content is defined in `src/lib/data.ts` using types from `src/lib/types.ts`.
+- **Routing**: Uses a custom hash-based routing system via `useRouteHash.ts` to manage sub-pages (Archive Spreads) without a complex router library.
+- **Accessibility**: High-contrast ratios (WCAG AAA targets) and full support for `prefers-reduced-motion`.
+- **Imports**: Use `@/` alias for absolute paths from the `src` directory.
 
-The site's content is driven by files in the `src/content/` directory.
+## Project Structure
+- `src/components`: UI primitives and composite installations.
+- `src/hooks`: Custom React hooks for motion logic and system state.
+- `src/lib`: Core data structures, types, and utility functions.
+- `src/styles`: Tailwind v4 configuration and global design system logic (`index.css`).
+- `src/content`: (Optional) Markdown and asset sources for the portfolio.
 
-- **Portrait Images:** `src/content/portrait/`. Subdirectories like `creative-technologist/` correspond to hero slides.
-- **Collections:** `src/content/collections/`. Subdirectories (e.g., `poetry`, `artworks`) hold Markdown files and images for specific archives.
-- **Markdown Frontmatter:** Content files can use frontmatter for metadata:
-  ```yaml
-  ---
-  title: Project Title
-  category: Design
-  accent: "#ff5c35"
-  description: Short summary for the card.
-  ---
-  Full content here.
-  ```
-- **Images/Documents:** Placing an image or PDF with the same filename as a Markdown file (e.g., `my-poem.md` and `my-poem.jpg`) will automatically associate them in the archive view.
+---
 
-## Development Conventions
-
-- **Styling:** Use plain CSS in `src/App.css`. Avoid adding CSS frameworks unless requested.
-- **Components:** Currently, the application logic is centralized in `src/App.jsx`. For smaller updates, keep it there. If the file exceeds ~1000 lines, consider breaking out components into a `src/components/` directory.
-- **Animations:** Follow the "calm rotation" philosophy. Avoid aggressive crossfading or distracting progress indicators. Respect `prefers-reduced-motion`.
-- **Deployment:** The project is configured for GitHub Pages. Pushing to the `main` branch triggers the GitHub Action in `.github/workflows/deploy.yml`.
-
-## Important Files
-
-- `src/App.jsx`: Main entry point containing application state, routing logic, and content ingestion.
-- `src/App.css`: Global styles and layout.
-- `vite.config.js`: Vite configuration, including the base path for GitHub Pages.
-- `outputs/`: Contains the original design documents (PRD, Tech Stack, Execution Plan).
+*This document serves as the foundational instruction set for Gemini CLI interactions within this workspace.*
