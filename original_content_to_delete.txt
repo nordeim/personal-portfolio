@@ -1,0 +1,42 @@
+$ find src/ *html *js *ts *tsx *json *yml *yaml -type f
+$ cat original_content_list.txt
+$ tar -zcvf original_codebase.tar.gz -T original_content_list.txt
+
+$ grep -Ev '\.md$|\.svg$|\.jpg$|\.jpeg$|\.pdf$' original_content_list.txt
+src/.DS_Store
+src/App.jsx
+src/content/.DS_Store
+src/content/collections/.DS_Store
+src/content/portrait/.DS_Store
+src/content/portrait/project-archive/.DS_Store
+src/content/portrait/creative-technologist/.DS_Store
+src/content/portrait/open-to-collaborate/.DS_Store
+src/content/portfolio/.DS_Store
+src/App.css
+src/main.jsx
+index.html
+vite.config.js
+package.json
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    index.html
+        deleted:    package.json
+        deleted:    src/App.css
+        deleted:    src/App.jsx
+        deleted:    src/main.jsx
+        deleted:    vite.config.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        original_codebase.tar.gz
+        original_content_list.txt
+        original_content_to_delete.txt
+
+rm -rf package-lock.json node_modules .next dist
+rm src/.DS_Store src/App.jsx src/content/.DS_Store src/content/collections/.DS_Store src/content/portrait/.DS_Store src/content/portrait/project-archive/.DS_Store src/content/portrait/creative-technologist/.DS_Store src/content/portrait/open-to-collaborate/.DS_Store src/content/portfolio/.DS_Store src/App.css src/main.jsx index.html vite.config.js package.json
