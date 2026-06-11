@@ -85,7 +85,7 @@ function App() {
 
   return (
     <div className={`relative min-h-screen ${isNightMode ? 'theme-night' : 'theme-day'}`}>
-      <a className="fixed top-3 left-3 z-20 -translate-y-[160%] p-2.5 border border-white/13 rounded-lg bg-white shadow-[0_10px_30px_rgba(19,27,43,0.08)] focus:translate-y-0" href="#main-content">
+      <a className="fixed top-3 left-3 z-20 -translate-y-[160%] p-2.5 border border-white/13 rounded-none bg-white shadow-[0_10px_30px_rgba(19,27,43,0.08)] focus:translate-y-0" href="#main-content">
         Skip to main content
       </a>
 
@@ -138,7 +138,7 @@ function App() {
             {socialLinks.map((link) => (
               <a
                 aria-label={link.label}
-                className="grid place-items-center w-[34px] h-[34px] border border-white/24 rounded-full text-white hover:border-white hover:bg-white hover:text-[#07080d] transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[#15151b] [.theme-day_&]:hover:text-[#fff8e8]"
+                className="grid place-items-center w-[34px] h-[34px] border border-white/24 rounded-none text-white hover:border-white hover:bg-white hover:text-[#07080d] transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[#15151b] [.theme-day_&]:hover:text-[#fff8e8]"
                 href={link.href}
                 key={link.label}
               >

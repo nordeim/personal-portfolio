@@ -1,0 +1,24 @@
+$ find src/ *html -type f | grep -Ev '\.md$|\.svg$|\.jpg$|\.jpeg$|\.pdf$|vite-env.d.ts'
+src/styles/index.css
+src/App.tsx
+src/main.tsx
+src/components/HeroKinetic.tsx
+src/components/AboutFlow.tsx
+src/components/MachineOverlay.tsx
+src/components/BentoGrid.tsx
+src/components/ArchiveSpread.tsx
+src/components/SocialIcon.tsx
+src/components/ThemeToggle.tsx
+src/components/ContentBody.tsx
+src/components/BentoTile.tsx
+src/components/Navigation.tsx
+src/components/ContactSection.tsx
+src/components/BrandMark.tsx
+src/components/GrainOverlay.tsx
+src/hooks/useWeightedScroll.ts
+src/hooks/useReducedMotion.ts
+src/hooks/useRouteHash.ts
+src/lib/data.ts
+src/lib/types.ts
+src/lib/content.ts
+index.html

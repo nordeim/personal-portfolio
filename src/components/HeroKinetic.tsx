@@ -232,7 +232,7 @@ export function HeroKinetic({
               <button
                 aria-label={`Show panel ${index + 1}`}
                 aria-pressed={index === activeIndex}
-                className={`w-2.5 h-2.5 p-0 border rounded-full transition-all duration-200 ${
+                className={`w-2.5 h-2.5 p-0 border rounded-none transition-all duration-200 ${
                   index === activeIndex
                     ? 'w-7 bg-white border-white'
                     : 'bg-transparent border-white/58 hover:border-white'
@@ -250,7 +250,7 @@ export function HeroKinetic({
       {/* Scroll cue */}
       <a className="absolute left-1/2 bottom-6 inline-flex items-center gap-2.5 text-white/66 text-xs font-extrabold uppercase -translate-x-1/2 max-[760px]:hidden [.theme-day_&]:text-[rgba(21,21,27,0.58)]" href="#about">
         <span>Explore</span>
-        <span className="grid place-items-center w-[30px] h-[30px] border border-white/18 rounded-md [.theme-day_&]:border-[rgba(21,21,27,0.16)]" aria-hidden="true">↓</span>
+        <span className="grid place-items-center w-[30px] h-[30px] border border-white/18 rounded-none [.theme-day_&]:border-[rgba(21,21,27,0.16)]" aria-hidden="true">↓</span>
       </a>
     </section>
   );

@@ -1,13 +1,13 @@
 # AGENTS.md: Nicholas Yun Portfolio (v2.0)
 
-This document provides high-signal context for AI agents working on this repository to avoid common mistakes and architectural regressions.
+This document provides high-signal context for AI agents working in this repository to avoid common mistakes and architectural regressions.
 
 ## 🛠 Critical Commands
 | Command | Purpose |
 | :--- | :--- |
 | `pnpm dev` | Starts Vite 6 dev server. |
 | `pnpm typecheck` | **Mandatory** before any code changes. Uses TS 6 strict mode. |
-| `pnpm build` | Production build. Verify this after styling changes. |
+| `pnpm build` | Production build. Verify after styling changes. |
 
 ## 🏗 Environment & Toolchain
 - **Package Manager**: Use `pnpm` exclusively.
@@ -25,7 +25,7 @@ This document provides high-signal context for AI agents working on this reposit
 - **The 28px Grid**: Layouts must align with the visible 28px background grid rhythm.
 - **Brutalist Borders**: Use `1px solid` borders and `0px` border-radius (`radius-brutal`).
 - **Reject "AI Slop"**: Avoid generic UI patterns like purple gradients, Inter-only typography, and rounded card grids.
-- **Typography**: 
+- **Typography**:
   - Kinetic/High-contrast: `Cormorant Garamond` (Editorial).
   - Technical/Labels: `IBM Plex Mono` (Utility).
 

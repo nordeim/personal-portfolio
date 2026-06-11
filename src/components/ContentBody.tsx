@@ -17,8 +17,8 @@ export function ContentBody({ item }: ContentBodyProps) {
 
   return (
     <div className="max-w-[780px]">
-      {item.body.split(/\n\s*\n/).map((paragraph) => (
-        <p key={paragraph} className="m-0 mb-4.5 text-white/78 text-[clamp(1rem,1.5vw,1.22rem)] leading-[1.76] [.theme-day_&]:text-[rgba(21,21,27,0.66)]">
+      {item.body.split(/\n\s*\n/).map((paragraph, index) => (
+        <p key={`para-${index}`} className="m-0 mb-4.5 text-white/78 text-[clamp(1rem,1.5vw,1.22rem)] leading-[1.76] [.theme-day_&]:text-[rgba(21,21,27,0.66)]">
           {paragraph}
         </p>
       ))}

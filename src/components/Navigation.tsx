@@ -65,7 +65,7 @@ export function Navigation({
 
           <div className="flex items-center gap-2">
             <button
-              className="inline-flex items-center gap-2 min-h-[38px] px-3 border border-white/18 rounded-full bg-white/8 text-white/78 font-extrabold text-sm hover:border-white/40 hover:text-white transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:bg-[rgba(255,255,255,0.62)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:text-[#15151b] font-[family-name:var(--font-utility)]"
+              className="inline-flex items-center gap-2 min-h-[38px] px-3 border border-white/18 rounded-none bg-white/8 text-white/78 font-extrabold text-sm hover:border-white/40 hover:text-white transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:bg-[rgba(255,255,255,0.62)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:text-[#15151b] font-[family-name:var(--font-utility)]"
               onClick={onMachineToggle}
               type="button"
               aria-label="Toggle Machine Experience"
@@ -79,13 +79,13 @@ export function Navigation({
               aria-controls="mobile-navigation"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation"
-              className="hidden max-[760px]:inline-flex items-center justify-center flex-col gap-1 w-10 h-10 border border-white/18 rounded-full bg-white/8"
+              className="hidden max-[760px]:inline-flex items-center justify-center flex-col gap-1 w-10 h-10 border border-white/18 rounded-none bg-white/8"
               onClick={onMenuToggle}
               type="button"
             >
-              <span className="block w-4 h-0.5 rounded-full bg-current" />
-              <span className="block w-4 h-0.5 rounded-full bg-current" />
-              <span className="block w-4 h-0.5 rounded-full bg-current" />
+              <span className="block w-4 h-0.5 rounded-none bg-current" />
+              <span className="block w-4 h-0.5 rounded-none bg-current" />
+              <span className="block w-4 h-0.5 rounded-none bg-current" />
             </button>
           </div>
         </div>
@@ -115,7 +115,7 @@ export function Navigation({
           </a>
           <button
             aria-label="Close navigation"
-            className="grid place-items-center w-10 h-10 border border-white/18 rounded-full bg-white/8 text-white text-[1.55rem] leading-none [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
+            className="grid place-items-center w-10 h-10 border border-white/18 rounded-none bg-white/8 text-white text-[1.55rem] leading-none [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
             onClick={onMenuToggle}
             type="button"
           >
@@ -145,7 +145,7 @@ export function Navigation({
 
         <div className="flex flex-col gap-2.5 mt-auto pt-4 border-t border-white/12 [.theme-day_&]:border-[rgba(21,21,27,0.1)]">
           <a
-            className="inline-flex items-center justify-center min-h-[46px] px-3.5 rounded-full bg-white text-[#07080d] font-extrabold [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]"
+            className="inline-flex items-center justify-center min-h-[46px] px-3.5 rounded-none bg-white text-[#07080d] font-extrabold [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]"
             href={contactLinks.email}
             onClick={onMenuToggle}
           >
@@ -153,11 +153,11 @@ export function Navigation({
           </a>
           <button
             aria-label={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
-            className="inline-flex items-center justify-center gap-2.5 min-h-[46px] px-3.5 border border-white/16 rounded-full bg-white/8 text-white font-extrabold [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
+            className="inline-flex items-center justify-center gap-2.5 min-h-[46px] px-3.5 border border-white/16 rounded-none bg-white/8 text-white font-extrabold [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
             onClick={() => { onThemeToggle(); }}
             type="button"
           >
-            <span className="block w-[18px] h-[18px] border-2 rounded-full bg-current shadow-[inset_-6px_0_0_rgba(7,8,13,0.72)] [.theme-day_&]:shadow-[inset_0_0_0_5px_#fff8e8]" aria-hidden="true" />
+            <span className="block w-[18px] h-[18px] border-2 rounded-none bg-current shadow-[inset_-6px_0_0_rgba(7,8,13,0.72)] [.theme-day_&]:shadow-[inset_0_0_0_5px_#fff8e8]" aria-hidden="true" />
             {isNightMode ? 'Night mode' : 'Light mode'}
           </button>
         </div>
@@ -169,7 +169,7 @@ export function Navigation({
               href={link.href}
               key={link.label}
               onClick={onMenuToggle}
-              className="grid place-items-center w-[42px] h-[42px] border border-white/14 rounded-full bg-white/8 text-white [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
+              className="grid place-items-center w-[42px] h-[42px] border border-white/14 rounded-none bg-white/8 text-white [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
             >
               <SocialIcon icon={link.icon} />
             </a>

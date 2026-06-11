@@ -1,0 +1,193 @@
+diff --git a/src/App.tsx b/src/App.tsx
+index d8a9811..10200ec 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -85,7 +85,7 @@ function App() {
+ 
+   return (
+     <div className={`relative min-h-screen ${isNightMode ? 'theme-night' : 'theme-day'}`}>
+-      <a className="fixed top-3 left-3 z-20 -translate-y-[160%] p-2.5 border border-white/13 rounded-lg bg-white shadow-[0_10px_30px_rgba(19,27,43,0.08)] focus:translate-y-0" href="#main-content">
++      <a className="fixed top-3 left-3 z-20 -translate-y-[160%] p-2.5 border border-white/13 rounded-none bg-white shadow-[0_10px_30px_rgba(19,27,43,0.08)] focus:translate-y-0" href="#main-content">
+         Skip to main content
+       </a>
+ 
+@@ -138,7 +138,7 @@ function App() {
+             {socialLinks.map((link) => (
+               <a
+                 aria-label={link.label}
+-                className="grid place-items-center w-[34px] h-[34px] border border-white/24 rounded-full text-white hover:border-white hover:bg-white hover:text-[#07080d] transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[#15151b] [.theme-day_&]:hover:text-[#fff8e8]"
++                className="grid place-items-center w-[34px] h-[34px] border border-white/24 rounded-none text-white hover:border-white hover:bg-white hover:text-[#07080d] transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[#15151b] [.theme-day_&]:hover:text-[#fff8e8]"
+                 href={link.href}
+                 key={link.label}
+               >
+diff --git a/src/components/ArchiveSpread.tsx b/src/components/ArchiveSpread.tsx
+index 600fb63..3af8ca9 100644
+--- a/src/components/ArchiveSpread.tsx
++++ b/src/components/ArchiveSpread.tsx
+@@ -37,7 +37,7 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
+           <article className="grid gap-7 p-[clamp(24px,5vw,54px)] border border-white/13 rounded-none bg-white/[0.055] [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_16%,transparent),transparent_42%),rgba(255,255,255,0.54)]">
+             {activeItem.image ? (
+               <div className="overflow-hidden max-h-[620px] rounded-none">
+-                <img alt="" className="block w-full h-full object-cover" src={activeItem.image} />
++                <img alt={activeItem.title} className="block w-full h-full object-cover" src={activeItem.image} />
+               </div>
+             ) : null}
+             {activeItem.link ? (
+@@ -64,7 +64,7 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
+                 >
+                   {item.image ? (
+                     <span className="block overflow-hidden -m-5.5 mb-2 aspect-video border-b border-white/12 [.theme-day_&]:border-[rgba(21,21,27,0.08)]">
+-                      <img alt="" className="block w-full h-full object-cover" src={item.image} />
++                      <img alt={item.title} className="block w-full h-full object-cover" src={item.image} />
+                     </span>
+                   ) : null}
+                   <span className="text-xs font-extrabold uppercase text-[color-mix(in_srgb,var(--archive-accent)_72%,white)] [.theme-day_&]:text-[color-mix(in_srgb,var(--archive-accent)_65%,#15151b)]">
+diff --git a/src/components/ContactSection.tsx b/src/components/ContactSection.tsx
+index 52bec81..21eda2d 100644
+--- a/src/components/ContactSection.tsx
++++ b/src/components/ContactSection.tsx
+@@ -29,11 +29,11 @@ export function ContactSection() {
+             {socialLinks.map((link) => (
+               <a
+                 aria-label={link.label}
+-                className="inline-flex items-center gap-2.5 min-h-11 px-3.5 pl-1.5 border border-white/14 rounded-full bg-white/[0.06] text-white font-bold hover:border-white hover:bg-white/12 transition-all duration-200 [.theme-day_&]:border-[rgba(21,21,27,0.12)] [.theme-day_&]:bg-[rgba(255,255,255,0.54)] [.theme-day_&]:text-[#15151b] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[rgba(255,255,255,0.78)]"
++                className="inline-flex items-center gap-2.5 min-h-11 px-3.5 pl-1.5 border border-white/14 rounded-none bg-white/[0.06] text-white font-bold hover:border-white hover:bg-white/12 transition-all duration-200 [.theme-day_&]:border-[rgba(21,21,27,0.12)] [.theme-day_&]:bg-[rgba(255,255,255,0.54)] [.theme-day_&]:text-[#15151b] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[rgba(255,255,255,0.78)]"
+                 href={link.href}
+                 key={link.label}
+               >
+-                <span className="grid place-items-center w-8 h-8 rounded-full bg-white text-[#07080d] [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]" aria-hidden="true">
++                <span className="grid place-items-center w-8 h-8 rounded-none bg-white text-[#07080d] [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]" aria-hidden="true">
+                   <SocialIcon icon={link.icon} />
+                 </span>
+                 <span>{link.label}</span>
+diff --git a/src/components/ContentBody.tsx b/src/components/ContentBody.tsx
+index 966ebe8..10e1171 100644
+--- a/src/components/ContentBody.tsx
++++ b/src/components/ContentBody.tsx
+@@ -17,8 +17,8 @@ export function ContentBody({ item }: ContentBodyProps) {
+ 
+   return (
+     <div className="max-w-[780px]">
+-      {item.body.split(/\n\s*\n/).map((paragraph) => (
+-        <p key={paragraph} className="m-0 mb-4.5 text-white/78 text-[clamp(1rem,1.5vw,1.22rem)] leading-[1.76] [.theme-day_&]:text-[rgba(21,21,27,0.66)]">
++      {item.body.split(/\n\s*\n/).map((paragraph, index) => (
++        <p key={`para-${index}`} className="m-0 mb-4.5 text-white/78 text-[clamp(1rem,1.5vw,1.22rem)] leading-[1.76] [.theme-day_&]:text-[rgba(21,21,27,0.66)]">
+           {paragraph}
+         </p>
+       ))}
+diff --git a/src/components/HeroKinetic.tsx b/src/components/HeroKinetic.tsx
+index 95621c0..dfb9162 100644
+--- a/src/components/HeroKinetic.tsx
++++ b/src/components/HeroKinetic.tsx
+@@ -232,7 +232,7 @@ export function HeroKinetic({
+               <button
+                 aria-label={`Show panel ${index + 1}`}
+                 aria-pressed={index === activeIndex}
+-                className={`w-2.5 h-2.5 p-0 border rounded-full transition-all duration-200 ${
++                className={`w-2.5 h-2.5 p-0 border rounded-none transition-all duration-200 ${
+                   index === activeIndex
+                     ? 'w-7 bg-white border-white'
+                     : 'bg-transparent border-white/58 hover:border-white'
+@@ -250,7 +250,7 @@ export function HeroKinetic({
+       {/* Scroll cue */}
+       <a className="absolute left-1/2 bottom-6 inline-flex items-center gap-2.5 text-white/66 text-xs font-extrabold uppercase -translate-x-1/2 max-[760px]:hidden [.theme-day_&]:text-[rgba(21,21,27,0.58)]" href="#about">
+         <span>Explore</span>
+-        <span className="grid place-items-center w-[30px] h-[30px] border border-white/18 rounded-md [.theme-day_&]:border-[rgba(21,21,27,0.16)]" aria-hidden="true">↓</span>
++        <span className="grid place-items-center w-[30px] h-[30px] border border-white/18 rounded-none [.theme-day_&]:border-[rgba(21,21,27,0.16)]" aria-hidden="true">↓</span>
+       </a>
+     </section>
+   );
+diff --git a/src/components/Navigation.tsx b/src/components/Navigation.tsx
+index b52eef6..956ad58 100644
+--- a/src/components/Navigation.tsx
++++ b/src/components/Navigation.tsx
+@@ -65,7 +65,7 @@ export function Navigation({
+ 
+           <div className="flex items-center gap-2">
+             <button
+-              className="inline-flex items-center gap-2 min-h-[38px] px-3 border border-white/18 rounded-full bg-white/8 text-white/78 font-extrabold text-sm hover:border-white/40 hover:text-white transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:bg-[rgba(255,255,255,0.62)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:text-[#15151b] font-[family-name:var(--font-utility)]"
++              className="inline-flex items-center gap-2 min-h-[38px] px-3 border border-white/18 rounded-none bg-white/8 text-white/78 font-extrabold text-sm hover:border-white/40 hover:text-white transition-colors [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:bg-[rgba(255,255,255,0.62)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:text-[#15151b] font-[family-name:var(--font-utility)]"
+               onClick={onMachineToggle}
+               type="button"
+               aria-label="Toggle Machine Experience"
+@@ -79,13 +79,13 @@ export function Navigation({
+               aria-controls="mobile-navigation"
+               aria-expanded={isMenuOpen}
+               aria-label="Toggle navigation"
+-              className="hidden max-[760px]:inline-flex items-center justify-center flex-col gap-1 w-10 h-10 border border-white/18 rounded-full bg-white/8"
++              className="hidden max-[760px]:inline-flex items-center justify-center flex-col gap-1 w-10 h-10 border border-white/18 rounded-none bg-white/8"
+               onClick={onMenuToggle}
+               type="button"
+             >
+-              <span className="block w-4 h-0.5 rounded-full bg-current" />
+-              <span className="block w-4 h-0.5 rounded-full bg-current" />
+-              <span className="block w-4 h-0.5 rounded-full bg-current" />
++              <span className="block w-4 h-0.5 rounded-none bg-current" />
++              <span className="block w-4 h-0.5 rounded-none bg-current" />
++              <span className="block w-4 h-0.5 rounded-none bg-current" />
+             </button>
+           </div>
+         </div>
+@@ -115,7 +115,7 @@ export function Navigation({
+           </a>
+           <button
+             aria-label="Close navigation"
+-            className="grid place-items-center w-10 h-10 border border-white/18 rounded-full bg-white/8 text-white text-[1.55rem] leading-none [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
++            className="grid place-items-center w-10 h-10 border border-white/18 rounded-none bg-white/8 text-white text-[1.55rem] leading-none [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
+             onClick={onMenuToggle}
+             type="button"
+           >
+@@ -145,7 +145,7 @@ export function Navigation({
+ 
+         <div className="flex flex-col gap-2.5 mt-auto pt-4 border-t border-white/12 [.theme-day_&]:border-[rgba(21,21,27,0.1)]">
+           <a
+-            className="inline-flex items-center justify-center min-h-[46px] px-3.5 rounded-full bg-white text-[#07080d] font-extrabold [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]"
++            className="inline-flex items-center justify-center min-h-[46px] px-3.5 rounded-none bg-white text-[#07080d] font-extrabold [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]"
+             href={contactLinks.email}
+             onClick={onMenuToggle}
+           >
+@@ -153,11 +153,11 @@ export function Navigation({
+           </a>
+           <button
+             aria-label={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
+-            className="inline-flex items-center justify-center gap-2.5 min-h-[46px] px-3.5 border border-white/16 rounded-full bg-white/8 text-white font-extrabold [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
++            className="inline-flex items-center justify-center gap-2.5 min-h-[46px] px-3.5 border border-white/16 rounded-none bg-white/8 text-white font-extrabold [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
+             onClick={() => { onThemeToggle(); }}
+             type="button"
+           >
+-            <span className="block w-[18px] h-[18px] border-2 rounded-full bg-current shadow-[inset_-6px_0_0_rgba(7,8,13,0.72)] [.theme-day_&]:shadow-[inset_0_0_0_5px_#fff8e8]" aria-hidden="true" />
++            <span className="block w-[18px] h-[18px] border-2 rounded-none bg-current shadow-[inset_-6px_0_0_rgba(7,8,13,0.72)] [.theme-day_&]:shadow-[inset_0_0_0_5px_#fff8e8]" aria-hidden="true" />
+             {isNightMode ? 'Night mode' : 'Light mode'}
+           </button>
+         </div>
+@@ -169,7 +169,7 @@ export function Navigation({
+               href={link.href}
+               key={link.label}
+               onClick={onMenuToggle}
+-              className="grid place-items-center w-[42px] h-[42px] border border-white/14 rounded-full bg-white/8 text-white [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
++              className="grid place-items-center w-[42px] h-[42px] border border-white/14 rounded-none bg-white/8 text-white [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[rgba(255,255,255,0.58)] [.theme-day_&]:text-[#15151b]"
+             >
+               <SocialIcon icon={link.icon} />
+             </a>
+diff --git a/src/components/ThemeToggle.tsx b/src/components/ThemeToggle.tsx
+index 282f9cd..62e3f03 100644
+--- a/src/components/ThemeToggle.tsx
++++ b/src/components/ThemeToggle.tsx
+@@ -8,7 +8,7 @@ export function ThemeToggle({ isNightMode, onToggle }: ThemeToggleProps) {
+     <button
+       aria-label={isNightMode ? 'Switch to day mode' : 'Switch to night mode'}
+       aria-pressed={isNightMode}
+-      className="inline-flex items-center gap-2 min-h-[38px] px-3 border rounded-full font-extrabold text-sm transition-colors duration-200
++      className="inline-flex items-center gap-2 min-h-[38px] px-3 border rounded-none font-extrabold text-sm transition-colors duration-200
+         border-white/18 bg-white/8 text-white/78
+         hover:border-current hover:text-white
+         [.theme-day_&]:border-[rgba(21,21,27,0.14)] [.theme-day_&]:bg-[rgba(255,255,255,0.62)] [.theme-day_&]:text-[rgba(21,21,27,0.72)] [.theme-day_&]:hover:text-[#15151b]
+@@ -18,7 +18,7 @@ export function ThemeToggle({ isNightMode, onToggle }: ThemeToggleProps) {
+     >
+       <span
+         aria-hidden="true"
+-        className="block w-[18px] h-[18px] border-2 rounded-full bg-current
++        className="block w-[18px] h-[18px] border-2 rounded-none bg-current
+           shadow-[inset_-6px_0_0_rgba(7,8,13,0.72)]
+           [.theme-day_&]:shadow-[inset_0_0_0_5px_#fff8e8]
+         "

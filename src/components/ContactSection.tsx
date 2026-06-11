@@ -29,11 +29,11 @@ export function ContactSection() {
             {socialLinks.map((link) => (
               <a
                 aria-label={link.label}
-                className="inline-flex items-center gap-2.5 min-h-11 px-3.5 pl-1.5 border border-white/14 rounded-full bg-white/[0.06] text-white font-bold hover:border-white hover:bg-white/12 transition-all duration-200 [.theme-day_&]:border-[rgba(21,21,27,0.12)] [.theme-day_&]:bg-[rgba(255,255,255,0.54)] [.theme-day_&]:text-[#15151b] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[rgba(255,255,255,0.78)]"
+                className="inline-flex items-center gap-2.5 min-h-11 px-3.5 pl-1.5 border border-white/14 rounded-none bg-white/[0.06] text-white font-bold hover:border-white hover:bg-white/12 transition-all duration-200 [.theme-day_&]:border-[rgba(21,21,27,0.12)] [.theme-day_&]:bg-[rgba(255,255,255,0.54)] [.theme-day_&]:text-[#15151b] [.theme-day_&]:hover:border-[#15151b] [.theme-day_&]:hover:bg-[rgba(255,255,255,0.78)]"
                 href={link.href}
                 key={link.label}
               >
-                <span className="grid place-items-center w-8 h-8 rounded-full bg-white text-[#07080d] [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]" aria-hidden="true">
+                <span className="grid place-items-center w-8 h-8 rounded-none bg-white text-[#07080d] [.theme-day_&]:bg-[#15151b] [.theme-day_&]:text-[#fff8e8]" aria-hidden="true">
                   <SocialIcon icon={link.icon} />
                 </span>
                 <span>{link.label}</span>

@@ -27,6 +27,17 @@ please meticulously plan to provide an awesome one line caption that describes t
 
 ---
 
+Awesome meticulous job so far. Please keep up the good work. Now, please meticulously plan to re-evaluate and re-validate your code review and audit findings and recommendations against the current codebase to confirm the alignment and to identify the root causes and the optomal fixes. Then meticulously plan to create a detailed remediation plan with ToDo list to resolve and fix the identified/outstanding issues and gaps. Review and validate the remediation plan against the codebase again to check for accurate alignment before proceeding to execute it meticulously. use TDD approach to make code changes.
+Now analyze the comprehensive audit report. Next create a detailed remediation plan with a TDD approach, validating it against the codebase. The audit has several key findings, including security vulnerabilities, bugs, and architecture issues. You need to meticulously verify these against the actual source to identify root causes and plan the safest, most effective fixes.
+# Task list:
+1. Re-evaluate and re-validate the audit findings against the current codebase
+2. Confirm alignment and identify root causes
+3. Create a detailed remediation plan with a ToDo list
+4. Validate the remediation plan against the codebase again
+5. Use a TDD (Test-Driven Development) approach
+
+---
+
 Please clone the GitHub repo using `https://github.com/nordeim/personal-portfolio.git`, then meticulously review the included `CLAUDE.md`, `GEMINI.md` and `README.md` to have a deep understanding of the WHAT, WHY and HOW of the project and its codebase design and architecture. Next, meticulously review the included codebase and website improvement plans `prd-v2-reimagining.md` and `MASTER_EXECUTION_PLAN.md` to plan making the necessary codebase changes to improve the resulting new website's UI/UX and visual aesthetics. Use the included skills `super-frontend-design-skill.md` , `luxeverse-architect-skill.md` as well as the suitable skills in the included `skills/` sub-folder to provide you with the necessary visual design and coding guidances. Before doing anything, first think deeper and thoroughly how best to re-imagine the final codebase, then meticulously plan to create a refined and comprehensive implementation plan with a detailed ToDo list, next review and validate the implementation plan, next save and stage the validated implementation plan before proceeding to execute it. Need to perform run pnpm type and build check to ensure an error-free codebase. 
 
 ---

@@ -37,7 +37,7 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
           <article className="grid gap-7 p-[clamp(24px,5vw,54px)] border border-white/13 rounded-none bg-white/[0.055] [.theme-day_&]:border-[rgba(21,21,27,0.1)] [.theme-day_&]:bg-[linear-gradient(145deg,color-mix(in_srgb,var(--archive-accent)_16%,transparent),transparent_42%),rgba(255,255,255,0.54)]">
             {activeItem.image ? (
               <div className="overflow-hidden max-h-[620px] rounded-none">
-                <img alt="" className="block w-full h-full object-cover" src={activeItem.image} />
+                <img alt={activeItem.title} className="block w-full h-full object-cover" src={activeItem.image} />
               </div>
             ) : null}
             {activeItem.link ? (
@@ -64,7 +64,7 @@ export function ArchiveSpread({ collection, items, activeItem }: ArchiveSpreadPr
                 >
                   {item.image ? (
                     <span className="block overflow-hidden -m-5.5 mb-2 aspect-video border-b border-white/12 [.theme-day_&]:border-[rgba(21,21,27,0.08)]">
-                      <img alt="" className="block w-full h-full object-cover" src={item.image} />
+                      <img alt={item.title} className="block w-full h-full object-cover" src={item.image} />
                     </span>
                   ) : null}
                   <span className="text-xs font-extrabold uppercase text-[color-mix(in_srgb,var(--archive-accent)_72%,white)] [.theme-day_&]:text-[color-mix(in_srgb,var(--archive-accent)_65%,#15151b)]">
