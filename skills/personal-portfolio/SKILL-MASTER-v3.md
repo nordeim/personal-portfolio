@@ -1,9 +1,15 @@
+---
 name: personal-portfolio
 description: >
-  The definitive, production-grade master skill for building, modifying, or auditing the Nicholas Yun portfolio (The Engineered Soul v2.0). This document supersedes ALL previous skill files (SKILL.md, SKILL-1.md, SKILL-2.md, SKILL-MASTER-update-1.md, and SKILL-MASTER-update-2.md). It encodes the deep design philosophy, strict architectural guardrails, exact implementation patterns, and debugging procedures required to maintain this React 19 + TypeScript 6 + Vite 6 + Tailwind CSS v4 codebase without regression or hallucination.
+  Build a Tactile Brutalist + High-End Editorial personal portfolio SPA using
+  React 19, TypeScript 6 strict, Vite 6, and Tailwind CSS v4. Covers the complete
+  lifecycle from project scaffold to shipping a type-safe, WCAG AAA-compliant,
+  component-driven digital installation with kinetic typography, hash-based routing,
+  import.meta.glob content ingestion, and dual-theme (night/day) design system.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 license: MIT
-version: 3.0.0 (MASTER-V3)
+version: 3.0.0
+---
 
 # The Engineered Soul — Portfolio Master Skill (v3.0.0)
 
@@ -171,6 +177,7 @@ src/
 ├── App.tsx                    # Thin orchestrator, state lifted here
 ├── main.tsx                   # React entry point with StrictMode
 ├── components/
+│   ├── Navigation.tsx         # Sticky nav + mobile drawer + MX toggle
 │   ├── HeroKinetic.tsx        # Viewport-scaled hero with pointer parallax
 │   ├── AboutFlow.tsx          # Asymmetric editorial about section
 │   ├── BentoGrid.tsx          # Portfolio gateway grid

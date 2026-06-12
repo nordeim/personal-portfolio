@@ -177,6 +177,7 @@ src/
 ├── App.tsx                    # Thin orchestrator, state lifted here
 ├── main.tsx                   # React entry point with StrictMode
 ├── components/
+│   ├── Navigation.tsx         # Sticky nav + mobile drawer + MX toggle
 │   ├── HeroKinetic.tsx        # Viewport-scaled hero with pointer parallax
 │   ├── AboutFlow.tsx          # Asymmetric editorial about section
 │   ├── BentoGrid.tsx          # Portfolio gateway grid
