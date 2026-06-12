@@ -123,6 +123,10 @@ awesome meticulous job ao far. please keep up the good work. now, please meticul
 
 ---
 
+yes, please meticulously plan to proceed to create an enhanced augmented `SKILL-MASTER.md` with the 12-section structure successfully resolves the audit's critique by providing both strategic enforcement and tactical generative depth. Do not be constrained by the length, and do not try to condense/compact information that results in useful details being stripped off. All relevant details from the source skill files should be preserved while removing duplicated details and obsolete/superceded details.
+
+---
+
 Please clone the GitHub repo using `https://github.com/nordeim/personal-portfolio.git`, then meticulously review the included `CLAUDE.md`, `GEMINI.md` and `README.md` to have a deep understanding of the WHAT, WHY and HOW of the project and its codebase design and architecture. Next, meticulously review the included codebase and website improvement plans `prd-v2-reimagining.md` and `MASTER_EXECUTION_PLAN.md` to plan making the necessary codebase changes to improve the resulting new website's UI/UX and visual aesthetics. Use the included skills `super-frontend-design-skill.md` , `luxeverse-architect-skill.md` as well as the suitable skills in the included `skills/` sub-folder to provide you with the necessary visual design and coding guidances. Before doing anything, first think deeper and thoroughly how best to re-imagine the final codebase, then meticulously plan to create a refined and comprehensive implementation plan with a detailed ToDo list, next review and validate the implementation plan, next save and stage the validated implementation plan before proceeding to execute it. Need to perform run pnpm type and build check to ensure an error-free codebase. 
 
 ---
