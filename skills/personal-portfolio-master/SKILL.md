@@ -1,9 +1,15 @@
-name: personal-portfolio
+---
+name: personal-portfolio-master
 description: >
-  The definitive, production-grade skill for building, modifying, or auditing the Nicholas Yun portfolio (The Engineered Soul v2.0). This document supersedes all previous skill files. It encodes the deep design philosophy, strict architectural guardrails, remediation lessons, and exact implementation patterns required to maintain this React 19 + TypeScript 6 + Vite 6 + Tailwind CSS v4 codebase.
+  Build a Tactile Brutalist + High-End Editorial personal portfolio SPA using
+  React 19, TypeScript 6 strict, Vite 6, and Tailwind CSS v4. Covers the complete
+  lifecycle from project scaffold to shipping a type-safe, WCAG AAA-compliant,
+  component-driven digital installation with kinetic typography, hash-based routing,
+  import.meta.glob content ingestion, and dual-theme (night/day) design system.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 license: MIT
 version: 3.0.0
+---
 
 # The Engineered Soul — Portfolio Master Skill (v3.0.0)
 
