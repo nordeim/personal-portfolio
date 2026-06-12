@@ -83,6 +83,44 @@ For example, captures extensive project knowledge, including:
 13. Best practices
 14. Coding patterns and anti-patterns
 
+Ensure that the new SKILL.md covers:
+1. Project Identity & Design Philosophy
+2. Tech Stack & Environment
+3. Bootstrapping & Configuration
+4. The Design System (Code-First)
+5. Component Architecture & Patterns
+6. Custom Hooks Deep Dive
+7. Content Management: import.meta.glob
+8. Accessibility (WCAG AAA) Implementation
+9. Anti-Patterns & Common Bugs
+10. Debugging Guide
+11. Pre-Ship Checklist
+12. Lessons Learnt & How to Avoid Them
+13. Pitfalls to Avoid
+14. Best Practices
+15. Coding Patterns
+16. Coding Anti-Patterns
+17. Responsive Breakpoint Reference
+18. Z-Index Layer Map
+19. Color Reference (Complete)
+20. The Complete TypeScript Interface Reference
+
+Need to validate:
+1. Tech stack versions match
+2. Configuration files match
+3. Design system tokens match
+4. Component architecture matches
+5. Hooks implementation matches
+6. Content ingestion patterns match
+7. Accessibility implementation matches
+8. Anti-patterns are documented correctly
+9. Color references match
+10. TypeScript interfaces match
+
+---
+
+awesome meticulous job ao far. please keep up the good work. now, please meticulously plan to merge @skills/personal-portfolio/SKILL-1.md with relevant sections from @skills/personal-portfolio/SKILL.md to create @skills/personal-portfolio/SKILL-2.md which is currently empty. goal is to create a new consolidated/combined skill `SKILL-2.md` that unify and merges all the useful relevant details and information from both SKILL.md and SKILL-1.md.
+
 ---
 
 Please clone the GitHub repo using `https://github.com/nordeim/personal-portfolio.git`, then meticulously review the included `CLAUDE.md`, `GEMINI.md` and `README.md` to have a deep understanding of the WHAT, WHY and HOW of the project and its codebase design and architecture. Next, meticulously review the included codebase and website improvement plans `prd-v2-reimagining.md` and `MASTER_EXECUTION_PLAN.md` to plan making the necessary codebase changes to improve the resulting new website's UI/UX and visual aesthetics. Use the included skills `super-frontend-design-skill.md` , `luxeverse-architect-skill.md` as well as the suitable skills in the included `skills/` sub-folder to provide you with the necessary visual design and coding guidances. Before doing anything, first think deeper and thoroughly how best to re-imagine the final codebase, then meticulously plan to create a refined and comprehensive implementation plan with a detailed ToDo list, next review and validate the implementation plan, next save and stage the validated implementation plan before proceeding to execute it. Need to perform run pnpm type and build check to ensure an error-free codebase. 
