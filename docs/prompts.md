@@ -46,12 +46,13 @@ awesome meticulous job so far. please keep up the good work. now, please meticul
 
 ---
 
-using `/home/project/personal-portfolio/skills/react19-ts6-vite8-tailwindv4-mvp/SKILL.md` as a sample, please meticulously plan to distill all your knowledge and knowhow about the current project into a skill at ``/home/project/personal-portfolio/skills/personal-portfolio/SKILL.md` (currently empty). distill our knowledge about the pupose, design and architecture about the current project into a guide on the design and building similar codebase by any other coding agents. also distill into the new SKILL.md, design guidance and methodology, coding patterns and anti-patterns, issues encountered and their solutions/fixes, common issues and bugs encountered and recommended fixes. goal is that with this new skill, any coding agent will be able to construct the same website design and codebase as closely matched to the current project as possible. encode anything anything that you think will be helpful for another coding agent to achive the same result and quality.
+Using the attached `sample_SKILL.md` file as an example, please meticulously plan to distill all your knowledge and know-how about the current project into a skill at ``/home/project/personal-portfolio/skills/personal-portfolio/SKILL.md` (currently empty). Distill our knowledge about the purpose, design and architecture of the current project into a guide on designing and building a similar codebase by any other coding agents. Also distill into the new SKILL.md, design guidance and methodology, coding patterns and anti-patterns, issues encountered and their solutions/fixes, common issues and bugs encountered and recommended fixes. goal is that with this new skill, any coding agent will be able to construct the same website design and codebase as closely matched to the current project as possible. encode anything that you think will be helpful for another coding agent to achieve the same quality result.
 
 # use the following steps/flow as your methodology guide:
 create a comprehensive, detailed skill file for this project. This document will serve as a complete guide for other coding agents to replicate the design, architecture, and quality of this codebase.  
-I’ll use the sample skill file as a structure reference while ensuring that every section is deeply informed by the project's actual code, design decisions, and the issues I've resolved. This document will be a concrete reference—containing exact className patterns, color values, the reasoning behind custom hooks, and the debugging of the import.meta.glob paths.  
-I'll structure it as follows:  
+use the sample skill file attached as a structure reference while ensuring that every section is deeply informed by the project's actual code, design decisions, and the issues you've resolved. This document will be a concrete reference—containing exact className patterns, color values, the reasoning behind custom hooks, and the debugging of the import.meta.glob paths.  
+
+Skill document structure:  
 1. Project Identity & Design Philosophy: The exact design tokens, typography hierarchy, and brutalist constraints.  
 2. Tech Stack & Environment: Exact versions and the critical erasableSyntaxOnly flag.  
 3. Bootstrapping & Configuration: How to set up the Vite/Tailwind v4 environment from scratch to match.  
@@ -63,7 +64,8 @@ I'll structure it as follows:
 9. Anti-Patterns & Common Bugs: A compilation of every issue found (rounded corners, empty alt, key stability, glob paths) and their exact fixes.  
 10. Debugging Guide: Step-by-step verification for common issues (broken images, type errors, build failures).  
 11. Pre-Ship Checklist: Exact commands (pnpm typecheck, pnpm build) and what to verify.  
-I will now write this file. Since it will be very large, I'll ensure it's comprehensive and directly references the codebase. 
+
+Plan first and then create the new SKILL.md, ensuring that it's comprehensive and directly references the codebase. 
 
 For example, captures extensive project knowledge, including:
 1. Design Philosophy: The "Tactile Brutalism" vs "High-End Editorial" thesis
@@ -76,10 +78,10 @@ For example, captures extensive project knowledge, including:
 8. Pre-Ship Checklist: Every item an agent must verify before claiming completion
 9. WCAG AAA Accessibility Rules: Specific checks for alt text, reduced motion, and contrast
 10. Meticulous Approach: The mandatory six-phase workflow for all changes
-11. lessons learnt and how to avoid or workaround them
-12. pitfalls to avoid
-13. best practices
-14. coding patterns and anti-patterns
+11. Lessons learnt and how to avoid or workaround them
+12. Pitfalls to avoid
+13. Best practices
+14. Coding patterns and anti-patterns
 
 ---
 
