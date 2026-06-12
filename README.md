@@ -76,11 +76,15 @@ pnpm build
 | **Package Manager** | pnpm | >= 9 | Dependency management |
 
 ### File Hierarchy
-- `src/components` — High-fidelity UI primitives (HeroKinetic, AboutFlow, MachineOverlay).
-- `src/hooks` — Interaction logic (`useWeightedScroll`, `useRouteHash`).
-- `src/lib` — Data-driven content ingestion and strict TypeScript interfaces.
-- `src/styles` — Global design system orchestration and Tailwind `@theme` tokens.
-- `content` — Structured Markdown and asset sources.
+ - `src/components` — High-fidelity UI primitives (HeroKinetic, AboutFlow, MachineOverlay).
+ - `src/hooks` — Interaction logic (`useWeightedScroll`, `useRouteHash`).
+ - `src/lib` — Data-driven content ingestion and strict TypeScript interfaces.
+ - `src/styles` — Global design system orchestration and Tailwind `@theme` tokens.
+ - `src/content` — Structured Markdown and asset sources.
+
+### Adding Media Content
+
+For instructions on where and how to place images, PDFs, and text files, see the [Media Content Placement Guide](./Media_Content_Placement_Guide.md). It covers portrait photos, collection items, and portfolio assets.
 
 ---
 

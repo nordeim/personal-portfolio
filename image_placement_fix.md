@@ -1,3 +1,13 @@
+I have meticulously created the Media_Content_Placement_Guide.md based on the analysis of the project's content ingestion system.
+Key insights from the investigation:
+1. Critical pre-existing bug fixed: The import.meta.glob paths in src/lib/content.ts were pointing to the wrong directory (./content/... which resolves to src/lib/content/, a non-existent folder). I corrected these to ../content/... so that all content (portrait images, collection items, portfolio items, and PDFs) are properly found by Vite during the build.
+2. Content architecture: The site uses a data-driven model where:
+   - Portrait images are matched by portraitKey (e.g., nicholas-yun, project-archive)
+   - Collection items in collections/ generate archive pages
+   - Portfolio items in portfolio/ feed the BentoGrid
+3. Content placement rules: The guide documents the exact file structure, naming conventions, and supported formats. It includes the critical "same basename" rule for pairing images with text items (e.g., poem.md + poem.jpg).
+The guide is saved at /home/project/personal-portfolio/Media_Content_Placement_Guide.md and covers portrait images, collection items (text, images, PDFs), and legacy portfolio gateways with a quick reference cheat sheet and troubleshooting section.
+
 # Take another screenshot and check for Nicholas text
 $ agent-browser screenshot /tmp/portfolio-screenshot-2.png 2>&1 && agent-browser get text 2>&1 | grep -i "nicholas" 2>&1
 ✓ Screenshot saved to /tmp/portfolio-screenshot-2.png

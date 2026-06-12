@@ -42,6 +42,47 @@ please use the 'dummy' image file @nicholas-0.webp for the broken 'Nicholas Yun'
 
 ---
 
+awesome meticulous job so far. please keep up the good work. now, please meticulously plan to create a user guide on how and where to upload media content like PDFs and image files to the appropriate folders relative to the project root folder. name the user guide as `Media_Contnt_Placement_Guide.md`
+
+---
+
+using `/home/project/personal-portfolio/skills/react19-ts6-vite8-tailwindv4-mvp/SKILL.md` as a sample, please meticulously plan to distill all your knowledge and knowhow about the current project into a skill at ``/home/project/personal-portfolio/skills/personal-portfolio/SKILL.md` (currently empty). distill our knowledge about the pupose, design and architecture about the current project into a guide on the design and building similar codebase by any other coding agents. also distill into the new SKILL.md, design guidance and methodology, coding patterns and anti-patterns, issues encountered and their solutions/fixes, common issues and bugs encountered and recommended fixes. goal is that with this new skill, any coding agent will be able to construct the same website design and codebase as closely matched to the current project as possible. encode anything anything that you think will be helpful for another coding agent to achive the same result and quality.
+
+# use the following steps/flow as your methodology guide:
+create a comprehensive, detailed skill file for this project. This document will serve as a complete guide for other coding agents to replicate the design, architecture, and quality of this codebase.  
+I’ll use the sample skill file as a structure reference while ensuring that every section is deeply informed by the project's actual code, design decisions, and the issues I've resolved. This document will be a concrete reference—containing exact className patterns, color values, the reasoning behind custom hooks, and the debugging of the import.meta.glob paths.  
+I'll structure it as follows:  
+1. Project Identity & Design Philosophy: The exact design tokens, typography hierarchy, and brutalist constraints.  
+2. Tech Stack & Environment: Exact versions and the critical erasableSyntaxOnly flag.  
+3. Bootstrapping & Configuration: How to set up the Vite/Tailwind v4 environment from scratch to match.  
+4. The Design System (Code-First): Exact CSS variables, Tailwind v4 @theme implementation, and brutalist rules.  
+5. Component Architecture & Patterns: The "Engineered Soul" component philosophy, data flow, and specific component breakdowns (HeroKinetic, BentoGrid, etc.).  
+6. Custom Hooks Deep Dive: useWeightedScroll and useRouteHash implementation details.  
+7. Content Management: How import.meta.glob works and the exact file structure for content ingestion.  
+8. Accessibility (WCAG AAA) Implementation: The useReducedMotion hook and global CSS overrides.  
+9. Anti-Patterns & Common Bugs: A compilation of every issue found (rounded corners, empty alt, key stability, glob paths) and their exact fixes.  
+10. Debugging Guide: Step-by-step verification for common issues (broken images, type errors, build failures).  
+11. Pre-Ship Checklist: Exact commands (pnpm typecheck, pnpm build) and what to verify.  
+I will now write this file. Since it will be very large, I'll ensure it's comprehensive and directly references the codebase. 
+
+For example, captures extensive project knowledge, including:
+1. Design Philosophy: The "Tactile Brutalism" vs "High-End Editorial" thesis
+2. Exact Design Tokens: The 28px grid, brutalist borders, typography hierarchy
+3. Bootstrapping from Zero: How to recreate this project from npm create vite@latest
+4. Component Architecture: How each major piece (HeroKinetic, BentoGrid, etc.) is built
+5. The import.meta.glob Bug: Detailed documentation of the path resolution issue that broke all content loading
+6. Content Ingestion Pattern: How to add new media and the critical path fix
+7. Anti-Patterns & Common Bugs: All issues found with root causes and exact fixes
+8. Pre-Ship Checklist: Every item an agent must verify before claiming completion
+9. WCAG AAA Accessibility Rules: Specific checks for alt text, reduced motion, and contrast
+10. Meticulous Approach: The mandatory six-phase workflow for all changes
+11. lessons learnt and how to avoid or workaround them
+12. pitfalls to avoid
+13. best practices
+14. coding patterns and anti-patterns
+
+---
+
 Please clone the GitHub repo using `https://github.com/nordeim/personal-portfolio.git`, then meticulously review the included `CLAUDE.md`, `GEMINI.md` and `README.md` to have a deep understanding of the WHAT, WHY and HOW of the project and its codebase design and architecture. Next, meticulously review the included codebase and website improvement plans `prd-v2-reimagining.md` and `MASTER_EXECUTION_PLAN.md` to plan making the necessary codebase changes to improve the resulting new website's UI/UX and visual aesthetics. Use the included skills `super-frontend-design-skill.md` , `luxeverse-architect-skill.md` as well as the suitable skills in the included `skills/` sub-folder to provide you with the necessary visual design and coding guidances. Before doing anything, first think deeper and thoroughly how best to re-imagine the final codebase, then meticulously plan to create a refined and comprehensive implementation plan with a detailed ToDo list, next review and validate the implementation plan, next save and stage the validated implementation plan before proceeding to execute it. Need to perform run pnpm type and build check to ensure an error-free codebase. 
 
 ---
