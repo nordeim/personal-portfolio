@@ -111,7 +111,7 @@ const portfolioGatewayOrder = [
 const heroSlides: HeroSlide[] = [
   {
     label: 'Creative Technologist',
-    portraitKey: 'creative-technologist',
+    portraitKey: 'nicholas-yun',
     headline: 'Ideas, made tangible.',
     subtitle: 'Code. Design. Words. Images. Experiments.',
     artifactTitle: 'Idea → Interface → Feeling',

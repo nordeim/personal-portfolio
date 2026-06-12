@@ -308,3 +308,35 @@ transforming...
 …
 Click to expand
 All remediation is complete. Let me finalize the todo list and create a summary of all actions taken.  
+
+I will now meticulously compare the two diffs and review the current code to verify for any regressions.  I've reviewed both diff files. The changes look correct and aligned with the intended remediation. I will now run a final grep to verify the current state of the codebase and check for any remaining rounded corners or other issues.
+✱ Grep "rounded-full|rounded-md|rounded-lg|rounded-xl|rounded-2xl|rounded-3xl" in src/components 
+✱ Grep "alt=" in src/components/ArchiveSpread.tsx (2 matches)
+✱ Grep "key=" in src/components/ContentBody.tsx (1 match)
+I will perform a final verification to ensure all rounded corners have been removed, the alt attributes are correct, and the key props are stable, confirming that these changes do not introduce any regressions.
+# Run final TypeScript type check
+$ pnpm typecheck 2>&1
+Already up to date
+Done in 666ms using pnpm v11.5.2
+$ tsc -b --noEmit
+# Run final production build
+$ pnpm build 2>&1
+Already up to date
+Done in 803ms using pnpm v11.5.2
+$ tsc -b && vite build
+vite v6.4.3 building for production...
+transforming...
+✓ 47 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.81 kB │ gzip:  0.44 kB
+dist/assets/index-ZrgBxAKa.css   81.78 kB │ gzip: 14.97 kB
+…
+Click to expand
+I will perform the final verification by confirming there are no regressions and documenting the results. I will also create a final status report and then present the complete remediation summary.  Let me write the final status report.
+
+All checks pass successfully. I will provide a summary of the updates.  All checks pass. Here's a summary of the updates I've made to align the documentation with the latest code:  README.md • Code Audit: Initiated a comprehensive code audit across the project to evaluate code quality, adherence to React and TypeScript best practices, and overall maintainability.
+CLAUDE.md • Added a "Key Prop Stability" section, documenting the best practices learned from ContentBody.tsx. • Added a "Known Issues & Gotchas" section to prevent regressions on aesthetic consistency and key prop stability. • Updated accessibility guidelines with specific requirements for alt text on content images.
+AGENTS.md • Converted the fixed issues section into a formal "Lessons Learned & Fixed Issues" with detailed root cause analysis. • Added specific actions for agents when dealing with rounding, alt text, and key props. • Added recommendations for the development workflow.
+All three files now accurately reflect the current state of the codebase, document the specific issues found during the audit (rounding, alt text, key props), and provide guardrails to prevent regressions in the future.
+

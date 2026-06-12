@@ -1,7 +1,7 @@
 const portraitImages = import.meta.glob(
   [
-    './content/portrait/*.{jpg,jpeg,png,webp,avif}',
-    './content/portrait/**/*.{jpg,jpeg,png,webp,avif}',
+    '../content/portrait/*.{jpg,jpeg,png,webp,avif}',
+    '../content/portrait/**/*.{jpg,jpeg,png,webp,avif}',
   ],
   {
     eager: true,
@@ -11,7 +11,7 @@ const portraitImages = import.meta.glob(
 ) as Record<string, string>;
 
 const portfolioTextFiles = import.meta.glob(
-  './content/portfolio/**/*.{md,txt}',
+  '../content/portfolio/**/*.{md,txt}',
   {
     eager: true,
     import: 'default',
@@ -20,7 +20,7 @@ const portfolioTextFiles = import.meta.glob(
 ) as Record<string, string>;
 
 const portfolioImageFiles = import.meta.glob(
-  './content/portfolio/**/*.{jpg,jpeg,png,webp,avif}',
+  '../content/portfolio/**/*.{jpg,jpeg,png,webp,avif}',
   {
     eager: true,
     import: 'default',
@@ -29,7 +29,7 @@ const portfolioImageFiles = import.meta.glob(
 ) as Record<string, string>;
 
 const collectionTextFiles = import.meta.glob(
-  './content/collections/**/*.{md,txt}',
+  '../content/collections/**/*.{md,txt}',
   {
     eager: true,
     import: 'default',
@@ -38,7 +38,7 @@ const collectionTextFiles = import.meta.glob(
 ) as Record<string, string>;
 
 const collectionImageFiles = import.meta.glob(
-  './content/collections/**/*.{jpg,jpeg,png,webp,avif}',
+  '../content/collections/**/*.{jpg,jpeg,png,webp,avif}',
   {
     eager: true,
     import: 'default',
@@ -47,7 +47,7 @@ const collectionImageFiles = import.meta.glob(
 ) as Record<string, string>;
 
 const collectionDocumentFiles = import.meta.glob(
-  './content/collections/**/*.pdf',
+  '../content/collections/**/*.pdf',
   {
     eager: true,
     import: 'default',

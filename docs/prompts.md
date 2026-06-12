@@ -38,6 +38,10 @@ Now analyze the comprehensive audit report. Next create a detailed remediation p
 
 ---
 
+please use the 'dummy' image file @nicholas-0.webp for the broken 'Nicholas Yun' image/photo on the landing page. check and move the image file to where it should be according to the current codebase design and then adjust the relevant file to display it on the landing page as it should show by design.
+
+---
+
 Please clone the GitHub repo using `https://github.com/nordeim/personal-portfolio.git`, then meticulously review the included `CLAUDE.md`, `GEMINI.md` and `README.md` to have a deep understanding of the WHAT, WHY and HOW of the project and its codebase design and architecture. Next, meticulously review the included codebase and website improvement plans `prd-v2-reimagining.md` and `MASTER_EXECUTION_PLAN.md` to plan making the necessary codebase changes to improve the resulting new website's UI/UX and visual aesthetics. Use the included skills `super-frontend-design-skill.md` , `luxeverse-architect-skill.md` as well as the suitable skills in the included `skills/` sub-folder to provide you with the necessary visual design and coding guidances. Before doing anything, first think deeper and thoroughly how best to re-imagine the final codebase, then meticulously plan to create a refined and comprehensive implementation plan with a detailed ToDo list, next review and validate the implementation plan, next save and stage the validated implementation plan before proceeding to execute it. Need to perform run pnpm type and build check to ensure an error-free codebase. 
 
 ---
